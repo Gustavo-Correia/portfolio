@@ -74,3 +74,68 @@ window.addEventListener('scroll', function () {
   backToTop()
   activateMenuAtCurrentSection()
 })
+// Modal functionality
+function initModals() {
+  // Get all modal triggers
+  const modalTriggers = document.querySelectorAll('[data-modal]');
+  const modals = document.querySelectorAll('.modal');
+  const closeButtons = document.querySelectorAll('.close-modal');
+  
+  // Open modal function
+  function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      modal.style.display = 'block';
+      document.body.style.overflow = 'hidden'; // Prevent scrolling
+    }
+  }
+  
+  // Close modal function
+  function closeModal(modal) {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Re-enable scrolling
+  }
+  
+  // Add click event to modal triggers
+  modalTriggers.forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const modalId = trigger.getAttribute('data-modal');
+      openModal(modalId);
+    });
+  });
+  
+  // Add click event to close buttons
+  closeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const modal = button.closest('.modal');
+      closeModal(modal);
+    });
+  });
+  
+  // Close modal when clicking outside
+  modals.forEach(modal => {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal(modal);
+      }
+    });
+  });
+  
+  // Close modal with Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      modals.forEach(modal => {
+        if (modal.style.display === 'block') {
+          closeModal(modal);
+        }
+      });
+    }
+  });
+}
+
+// Initialize modals when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+  // ... existing code ...
+  initModals();
+  // ... existing code ...
+});

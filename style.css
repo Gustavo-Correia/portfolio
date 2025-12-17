@@ -334,7 +334,6 @@ main {
 
 .card {
   padding: 3.625rem 2rem;
-  box-shadow: 0px 0px 12px var(--color-boxshadow);
   border-bottom: 0.25rem solid var(--color-base);
   border-radius: 0.25rem 0.25rem 0 0;
   text-align: center;
@@ -561,7 +560,124 @@ footer .social a:hover {
     font-size: 2rem;
   }
 }
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  animation: fadeIn 0.3s ease;
+}
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  background-color: var(--base-color);
+  margin: 5% auto;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.close-modal {
+  position: absolute;
+  right: 1.5rem;
+  top: 1rem;
+  font-size: 2rem;
+  color: var(--text-color-light);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-modal:hover {
+  color: var(--base-color-second);
+}
+
+.modal-content h2 {
+  color: var(--title-color);
+  margin-bottom: 1rem;
+}
+
+.modal-content h3 {
+  color: var(--base-color-second);
+  margin: 1.5rem 0 0.5rem;
+}
+
+.modal-content ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.modal-content li {
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.modal-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.modal-button i {
+  font-size: 1.2rem;
+}
+
+/* Card improvements */
+.card {
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.card-description {
+  padding: 0 1rem 1rem;
+  color: var(--text-color-light);
+  font-size: 0.9rem;
+}
 @media (min-width: 992px) {
   :root {
     --title-font-size: 2.25rem;

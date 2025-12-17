@@ -51,82 +51,183 @@
 
       <div class="divider-1"></div>
 
-      <section class="section" id="about">
-        <div class="container grid">
-          <div class="image">
-            <img src="imagens/desenvolvedor.png" alt="Imagem dobre nós" />
-          </div>
-          <div class="text">
-            <h2 class="title">Sobre mim</h2>
-            <p>
-              Olá meu nome é Gustavo. 📫
-            </p>
-            <br />
-            <p>
-              Gosto da forma que os humanos e a tecnologia evoluem constantemente e sou Apaixonado por Softwares e as infinitas coisas que são capazes de fazer. Assim, em 2021, comecei a trilhar os caminhos de uma graduação em Sistemas de Informação.
-            </p>
-            <br />
-            <p>
-              já tive o prazer de fazer vários projetos, durante os 4 anos desde que comecei a programar.
+            <section class="section" id="services">
+  <div class="container grid">
+    <header>
+      <h2 class="title">Projetos - Front Ends</h2>
+      <p class="subtitle">
+        Neste portfólio, você encontrará uma seleção cuidadosamente escolhida de projetos 
+        que demonstrem minha experiência em diversas tecnologias e frameworks, desde <span>HTML</span>, <span>CSS</span> e <span>JavaScript</span> 
+        até bibliotecas como <span>React</span> e <span>Vue.js</span>. Cada projeto foi desenvolvido com foco na usabilidade, desempenho e acessibilidade, 
+        garantindo uma experiência divertida para os usuários em diferentes dispositivos e navegadores.
+      </p>
+    </header>
+    <div class="cards grid">
+      <!-- Projeto 1 -->
+      <div class="card" data-modal="modal1">
+        <img src="imagens/AutoU.png" alt="Sistema de Classificação de Emails">
+        <h3 class="title">Sistema de Classificação de Emails</h3>
+      </div>
+      
+      <!-- Projeto 2 -->
+      <div class="card" data-modal="modal2">
+        <img src="imagens/restaurante.png" alt="Site Restaurante">
+        <h3 class="title">RestauranteWeb</h3>
+      </div>
+      
+      <!-- Projeto 3 -->
+      <div class="card" data-modal="modal3">
+        <img src="imagens/barbearia.png" alt="Revostudio">
+        <h3 class="title">Revostudio</h3>
+      </div>
+      
+      <!-- Projeto 4 -->
+      <div class="card" data-modal="modal4">
+        <img src="imagens/revostudio.png" alt="Landing Pages">
+        <h3 class="title">Landing Pages</h3>
+      </div>
+    </div>
+  </div>
+</section>
 
-Como a implementação sites responsivos com html,CSS e JavaScript, versionamento de Git,Java,Python e C++. Com esses conhecimentos adquiridos fui capaz de fazer projetos em Equipe durante minha Formação.
-            </p>
-          </div>
-        </div>
-      </section>
+<!-- Modal 1 -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h2>Sistema de Classificação Automática de Emails</h2>
+    <p>Uma aplicação web que utiliza inteligência artificial para classificar emails em categorias produtivas ou improdutivas e gerar respostas automáticas adequadas.</p>
+    
+    <h3>🚀 Funcionalidades</h3>
+    <ul>
+      <li><strong>Upload de arquivos:</strong> Suporte a arquivos .txt e .pdf</li>
+      <li><strong>Entrada de texto direto:</strong> Cole o conteúdo do email diretamente</li>
+      <li><strong>Classificação automática:</strong> Identifica se o email é produtivo ou improdutivo</li>
+      <li><strong>Geração de respostas:</strong> Sugere respostas automáticas baseadas na classificação</li>
+      <li><strong>Interface intuitiva:</strong> Design moderno e responsivo</li>
+    </ul>
+    
+    <h3>🛠️ Tecnologias Utilizadas</h3>
+    <ul>
+      <li><strong>Backend:</strong> Flask (Python)</li>
+      <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript</li>
+      <li><strong>IA/NLP:</strong> Hugging Face Transformers API</li>
+      <li><strong>Processamento de texto:</strong> NLTK</li>
+      <li><strong>Hospedagem:</strong> Render/Railway</li>
+    </ul>
+    
+    <div class="modal-buttons">
+      <a href="https://github.com/Gustavo-Correia/AutoU.git" target="_blank" class="button modal-button">
+        <i class="icon-github"></i> Ver Código
+      </a>
+      <a href="https://autou.onrender.com" target="_blank" class="button modal-button">
+        <i class="icon-external-link"></i> Visitar Projeto
+      </a>
+    </div>
+  </div>
+</div>
 
-      <div class="divider-2"></div>
+<!-- Modal 2 -->
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h2>RestauranteWeb</h2>
+    <p>Site completo para restaurante com cardápio online, sistema de reservas e informações sobre o estabelecimento.</p>
+    
+    <h3>🚀 Funcionalidades</h3>
+    <ul>
+      <li>Cardápio digital interativo</li>
+      <li>Sistema de reservas online</li>
+      <li>Galeria de fotos do restaurante</li>
+      <li>Informações de contato e localização</li>
+      <li>Design totalmente responsivo</li>
+    </ul>
+    
+    <h3>🛠️ Tecnologias Utilizadas</h3>
+    <ul>
+      <li>HTML5, CSS3, JavaScript</li>
+      <li>Bootstrap 5</li>
+      <li>PHP para backend</li>
+      <li>MySQL para banco de dados</li>
+    </ul>
+    
+    <div class="modal-buttons">
+      <a href="https://github.com/Gustavo-Correia/Restaurante" target="_blank" class="button modal-button">
+        <i class="icon-github"></i> Ver Código
+      </a>
+    </div>
+  </div>
+</div>
 
-      <section class="section" id="services">
-        <div class="container grid">
-          <header>
-            <h2 class="title">Projetos - Front Ends </h2>
-            <p class="subtitle">
-              Neste portfólio, você encontrará uma seleção cuidadosamente escolhida de projetos 
-              que demonstrem minha experiência em diversas tecnologias e frameworks, desde <span>HTML</span>, <span>CSS</span> e <span>JavaScript</span> 
-              até bibliotecas como <span>React</span> e <span>Vue.js</span>. Cada projeto foi desenvolvido com foco na usabilidade, desempenho e acessibilidade, 
-              garantindo uma experiência divertida para os usuários em diferentes dispositivos e navegadores.
-            </p>
-          </header>
-          <div class="cards grid">
-            <div class="card">
-              <img src="imagens/projeto_1.png" alt="projeto1">
-              <h3 class="title">Projeto - Secaps</h3>
-            </div>
-            <div class="card">
-              <img>
-              <h3 class="title">Projeto - nome</h3>
-            </div>
-            <div class="card">
-              <img>
-              <h3 class="title">Projeto - nome</h3>
-            </div>
-          </div>
-        </div>
-      </section>
+<!-- Modal 3 -->
+<div id="modal3" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h2>Revostudio</h2>
+    <p>Landing page moderna para estúdio criativo especializado em design e desenvolvimento web.</p>
+    
+    <h3>🚀 Funcionalidades</h3>
+    <ul>
+      <li>Design moderno e minimalista</li>
+      <li>Portfólio de trabalhos interativo</li>
+      <li>Formulário de contato funcional</li>
+      <li>Animações suaves e efeitos visuais</li>
+      <li>Otimizado para SEO</li>
+    </ul>
+    
+    <h3>🛠️ Tecnologias Utilizadas</h3>
+    <ul>
+      <li>HTML5, CSS3, JavaScript</li>
+      <li>GSAP para animações</li>
+      <li>Swiper.js para sliders</li>
+      <li>EmailJS para formulários</li>
+    </ul>
+    
+    <div class="modal-buttons">
+      <a href="https://github.com/Gustavo-Correia/revostudio" target="_blank" class="button modal-button">
+        <i class="icon-github"></i> Ver Código
+      </a>
+      <a href="https://barbearia.revoapp.cc/" target="_blank" class="button modal-button">
+        <i class="icon-external-link"></i> Visitar Projeto
+      </a>
+    </div>
+  </div>
+</div>
 
-      <div class="divider-1"></div>
+<!-- Modal 4 -->
+<div id="modal4" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h2>Landing Pages Collection</h2>
+    <p>Coleção de landing pages responsivas desenvolvidas para diferentes nichos e propósitos.</p>
+    
+    <h3>🚀 Funcionalidades</h3>
+    <ul>
+      <li>Designs variados para diferentes necessidades</li>
+      <li>Totalmente responsivas (mobile-first)</li>
+      <li>Otimizadas para conversão</li>
+      <li>Performance otimizada</li>
+      <li>Código limpo e bem documentado</li>
+    </ul>
+    
+    <h3>🛠️ Tecnologias Utilizadas</h3>
+    <ul>
+      <li>HTML5, CSS3, JavaScript</li>
+      <li>Sass/SCSS</li>
+      <li>Flexbox e Grid Layout</li>
+      <li>Git para versionamento</li>
+    </ul>
+    
+    <div class="modal-buttons">
+      <a href="https://github.com/Gustavo-Correia/landing-pages" target="_blank" class="button modal-button">
+        <i class="icon-github"></i> Ver Código
+      </a>
+      <a href="https://revoapp.cc/revostudio" target="_blank" class="button modal-button">
+        <i class="icon-external-link"></i> Visitar Projeto
+      </a>
+    </div>
+  </div>
+</div>
 
-      <section class="section" id="contact">
-        <div class="container grid">
-          <div class="text">
-            <h2 class="title">Entre em contato com a gente</h2>
-            <p>
-              Se você procura um desenvolvedor Front-end apaixonado, dedicado e com experiência comprovada, estou pronto para colaborar em projetos desafiadores e inovadores. Explore meu portfólio e sinta-se à vontade para entrar em contato para discutir como podemos trabalhar juntos para alcançar seus objetivos digitais.
-<br><br>Obrigado por visitar e aproveitar o meu portfólio. Estou ansioso para compartilhar minhas experiências e contribuir para o sucesso dos seus projetos!
-            </p>
-            <a href="https://api.whatsapp.com/send?phone=79999200998" class="button"
-              ><i class="icon-whatsapp"></i>Entre em contato</a
-            >
-          </div>
-          <div class="links">
-            <ul class="grid">
-              <li><i class="icon-phone"></i>(79)99920-0998</li>
-              <li><i class="icon-mail"></i>gucorreia2901@gmail.com</li>
-            </ul>
-          </div>
-        </div>
-      </section>
 
       <div class="divider-2"></div>
     </main>
