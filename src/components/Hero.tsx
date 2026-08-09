@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { ArrowDown, Download, Github, Mail } from "lucide-react";
 import videoAsset from "@/assets/architecture.mp4.asset.json";
+import curriculumPdf from "@/assets/curriculum/Curriculo_Luis_Gustavo_Desenvolvedor.pdf";
 
 export function Hero() {
   const [offset, setOffset] = useState(0);
@@ -71,7 +72,8 @@ export function Hero() {
             Entrar em contato
           </a>
           <a
-            href="mailto:gucorreia2901@gmail.com?subject=Curr%C3%ADculo"
+            href={curriculumPdf}
+            download="Curriculo_Luis_Gustavo_Desenvolvedor.pdf"
             className="inline-flex items-center gap-2 border border-line px-6 py-3 text-sm transition-colors hover:border-line-strong"
           >
             <Download className="size-4" />

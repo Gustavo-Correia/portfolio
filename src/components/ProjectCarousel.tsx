@@ -25,20 +25,36 @@ export function ProjectCarousel({
   const prev = useCallback(() => embla?.scrollPrev(), [embla]);
   const next = useCallback(() => embla?.scrollNext(), [embla]);
 
+  const isVideo = (src: string) => /\.(mp4|webm|ogg)$/i.test(src);
+
   return (
     <div className="group relative">
       <div className="overflow-hidden border border-line bg-card" ref={emblaRef}>
         <div className="flex">
           {images.map((img) => (
             <div key={img.src} className="min-w-0 shrink-0 grow-0 basis-full">
-              <img
-                src={img.src}
-                alt={`${title} — ${img.alt}`}
-                loading="lazy"
-                width={1280}
-                height={800}
-                className="aspect-[16/10] w-full object-cover opacity-90 transition-opacity duration-500 group-hover:opacity-100"
-              />
+              <div className="aspect-[16/10] w-full">
+                {isVideo(img.src) ? (
+                  <video
+                    src={img.src}
+                    aria-label={`${title} — ${img.alt}`}
+                    className="size-full object-contain opacity-90 transition-opacity duration-500 group-hover:opacity-100"
+                    controls
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                  />
+                ) : (
+                  <img
+                    src={img.src}
+                    alt={`${title} — ${img.alt}`}
+                    loading="lazy"
+                    className="size-full object-contain opacity-90 transition-opacity duration-500 group-hover:opacity-100"
+                  />
+                )}
+              </div>
             </div>
           ))}
         </div>
