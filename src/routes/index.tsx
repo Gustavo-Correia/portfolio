@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Github, Linkedin, Mail, MapPin, MessageCircle } from "lucide-react";
 
+import { BackgroundVideo } from "@/components/BackgroundVideo";
 import { Hero } from "@/components/Hero";
 import { Nav } from "@/components/Nav";
 import { ProjectBlock } from "@/components/ProjectBlock";
@@ -37,8 +38,9 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <main className="relative bg-background">
+    <main className="relative">
       <ScrollProgress />
+      <BackgroundVideo />
       <Nav />
       <Hero />
 
