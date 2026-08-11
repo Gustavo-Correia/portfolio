@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 
 const links = [
   { href: "#sobre", label: "Sobre" },
-  { href: "#especialidades", label: "Especialidades" },
-  { href: "#experiencia", label: "Experiência" },
-  { href: "#projetos", label: "Projetos" },
   { href: "#tecnologias", label: "Tecnologias" },
-  { href: "#contato", label: "Contato" },
+  { href: "#experiencia", label: "Experiência" },
+  { href: "#formacao", label: "Formação" },
+  { href: "#especialidades", label: "Especialidades" },
+  { href: "#projetos", label: "Projetos" },
 ];
 
 export function Nav() {
@@ -45,7 +45,7 @@ export function Nav() {
           href="#contato"
           className="border border-line px-4 py-2 font-mono text-[11px] tracking-[0.16em] uppercase transition-colors hover:border-line-strong"
         >
-          Disponível
+          Contato
         </a>
       </nav>
     </header>

@@ -314,13 +314,20 @@ export const techGroups = [
       "TypeScript",
       "Node.js",
       "React",
+      "Next.js",
       "PHP",
       "Laravel",
       "MySQL",
       "PostgreSQL",
+      "SQL Server",
+      "Sequelize",
       "APIs REST",
       "Git",
       "Docker",
+      "Docker Compose",
+      "CI/CD",
+      "AWS",
+      "Redis",
       "API Oficial do WhatsApp",
       "Z-API",
       "Baileys",
@@ -335,27 +342,45 @@ export const techGroups = [
       "Python",
       "Flask",
       "Java",
-      "Next.js",
-      "Sequelize",
+      "Spring Boot",
       "Prisma",
       "MongoDB",
       "Hugging Face",
-      "Docker Compose",
-      "CI/CD",
     ],
   },
   {
     level: "Conhecimento",
     note: "Estudo e uso pontual",
-    items: ["AWS", "Kubernetes", "Redis", "SQL Server"],
+    items: ["Kubernetes"],
   },
 ];
 
 export const education = [
   {
-    title: "Bacharelado em Sistemas de Informação",
+    title: "Graduando em Sistemas de Informação",
     place: "Universidade Federal de Sergipe — UFS",
-    period: "Junho de 2022 – Junho de 2027",
+    period: "Junho de 2022 – Previsão de conclusão em 2027",
+    status: "Em andamento",
+  },
+];
+
+export type Highlight = {
+  value: string;
+  label: string;
+};
+
+export const highlights: Highlight[] = [
+  {
+    value: "3+",
+    label: "anos de experiência prática com sistemas comerciais, CRM e automação",
+  },
+  {
+    value: "+40%",
+    label: "aumento estimado nas conversões de clientes internacionais",
+  },
+  {
+    value: "2",
+    label: "plataformas comerciais desenvolvidas e em produção",
   },
 ];
 

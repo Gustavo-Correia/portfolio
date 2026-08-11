@@ -3,6 +3,7 @@ import { Github, Linkedin, Mail, MapPin, MessageCircle } from "lucide-react";
 
 import { BackgroundVideo } from "@/components/BackgroundVideo";
 import { Hero } from "@/components/Hero";
+import { Metrics } from "@/components/Metrics";
 import { Nav } from "@/components/Nav";
 import { ProjectBlock } from "@/components/ProjectBlock";
 import { Reveal } from "@/components/Reveal";
@@ -12,6 +13,7 @@ import {
   certifications,
   education,
   experiences,
+  highlights,
   personalProjects,
   professionalProjects,
   specialties,
@@ -74,10 +76,10 @@ function Index() {
             <dl className="divide-y divide-border border border-line">
               {[
                 ["Atuação", "Full Stack · CRM · Automação"],
-                ["Experiência", "Desde 2023"],
+                ["Experiência", "3+ anos"],
                 ["Localização", "Aracaju, Sergipe"],
-                ["Formação", "Sistemas de Informação — UFS"],
-                ["Status", "Aberto a oportunidades"],
+                ["Formação", "Graduando em Sistemas de Informação — UFS"],
+                ["Status", "Em andamento"],
               ].map(([k, v]) => (
                 <div key={k} className="flex items-center justify-between gap-4 px-5 py-4">
                   <dt className="mono-label">{k}</dt>
@@ -87,24 +89,38 @@ function Index() {
             </dl>
           </Reveal>
         </div>
+
+        <div className="mt-10">
+          <Metrics items={highlights} />
+        </div>
       </section>
 
-      <section id="especialidades" className="border-t border-line">
+      <section id="tecnologias" className="border-t border-line">
         <div className="mx-auto max-w-6xl px-6 py-24 lg:py-36">
           <SectionHeader
             index="01"
-            label="Especialidades"
-            title="O que eu desenvolvo"
-            description="Do levantamento do problema à aplicação rodando em produção."
+            label="Tecnologias"
+            title="Stack por nível de domínio"
+            description="Organizado por experiência profissional, uso em projetos e conhecimento em estudo."
           />
-          <div className="grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
-            {specialties.map((s, i) => (
-              <Reveal key={s.title} delay={i * 60}>
-                <div className="group h-full bg-background p-8 transition-colors duration-500 hover:bg-card">
-                  <span className="mono-label">{String(i + 1).padStart(2, "0")}</span>
-                  <h3 className="mt-6 text-lg font-medium">{s.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
-                  <span className="mt-6 block h-px w-8 bg-line-strong transition-all duration-500 group-hover:w-16" />
+          <div className="space-y-px">
+            {techGroups.map((g, i) => (
+              <Reveal key={g.level} delay={i * 80}>
+                <div className="grid gap-6 border-t border-line py-10 lg:grid-cols-[1fr_2fr]">
+                  <div>
+                    <h3 className="text-lg font-medium">{g.level}</h3>
+                    <p className="mono-label mt-2">{g.note}</p>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {g.items.map((t) => (
+                      <span
+                        key={t}
+                        className="border border-line px-3 py-1.5 font-mono text-[11px] tracking-wide text-foreground/80 transition-colors hover:border-line-strong hover:text-foreground"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </Reveal>
             ))}
@@ -114,7 +130,12 @@ function Index() {
 
       <section id="experiencia" className="border-t border-line">
         <div className="mx-auto max-w-6xl px-6 py-24 lg:py-36">
-          <SectionHeader index="02" label="Trajetória" title="Experiência profissional" />
+          <SectionHeader
+            index="02"
+            label="Trajetória"
+            title="Experiência profissional"
+            description="3+ anos de experiência em sistemas comerciais, CRM, automação e integrações."
+          />
           <div className="space-y-px">
             {experiences.map((e, i) => (
               <Reveal key={e.company} delay={i * 80}>
@@ -147,75 +168,19 @@ function Index() {
         </div>
       </section>
 
-      <section id="projetos" className="border-t border-line">
-        <div className="mx-auto max-w-6xl px-6 py-24 lg:py-36">
-          <SectionHeader
-            index="03"
-            label="Projetos profissionais"
-            title="Sistemas em produção"
-            description="Plataformas comerciais desenvolvidas para empresas e clientes reais."
-          />
-          {professionalProjects.map((p, i) => (
-            <ProjectBlock key={p.id} project={p} flip={i % 2 === 1} />
-          ))}
-        </div>
-      </section>
-
-      <section id="pessoais" className="border-t border-line">
-        <div className="mx-auto max-w-6xl px-6 py-24 lg:py-36">
-          <SectionHeader
-            index="04"
-            label="Projetos pessoais e acadêmicos"
-            title="Onde eu experimento"
-            description="Projetos próprios e acadêmicos com código e documentação disponíveis."
-          />
-          {personalProjects.map((p, i) => (
-            <ProjectBlock key={p.id} project={p} flip={i % 2 === 1} />
-          ))}
-        </div>
-      </section>
-
-      <section id="tecnologias" className="border-t border-line">
-        <div className="mx-auto max-w-6xl px-6 py-24 lg:py-36">
-          <SectionHeader
-            index="05"
-            label="Tecnologias"
-            title="Stack por nível de domínio"
-            description="Organizado por experiência profissional, uso em projetos e conhecimento em estudo."
-          />
-          <div className="space-y-px">
-            {techGroups.map((g, i) => (
-              <Reveal key={g.level} delay={i * 80}>
-                <div className="grid gap-6 border-t border-line py-10 lg:grid-cols-[1fr_2fr]">
-                  <div>
-                    <h3 className="text-lg font-medium">{g.level}</h3>
-                    <p className="mono-label mt-2">{g.note}</p>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {g.items.map((t) => (
-                      <span
-                        key={t}
-                        className="border border-line px-3 py-1.5 font-mono text-[11px] tracking-wide text-foreground/80 transition-colors hover:border-line-strong hover:text-foreground"
-                      >
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section id="formacao" className="border-t border-line">
         <div className="mx-auto max-w-6xl px-6 py-24 lg:py-36">
-          <SectionHeader index="06" label="Formação" title="Educação e certificações" />
+          <SectionHeader index="03" label="Formação" title="Educação e certificações" />
           <div className="grid gap-12 lg:grid-cols-2">
             <Reveal>
               {education.map((e) => (
                 <div key={e.title} className="border border-line p-8">
-                  <h3 className="text-lg font-medium">{e.title}</h3>
+                  <div className="flex flex-wrap items-start justify-between gap-3">
+                    <h3 className="text-lg font-medium">{e.title}</h3>
+                    <span className="mono-label shrink-0 border border-line px-3 py-1 text-muted-foreground">
+                      {e.status}
+                    </span>
+                  </div>
                   <p className="mt-2 text-sm text-muted-foreground">{e.place}</p>
                   <p className="mono-label mt-4">{e.period}</p>
                 </div>
@@ -232,6 +197,57 @@ function Index() {
               </ul>
             </Reveal>
           </div>
+        </div>
+      </section>
+
+      <section id="especialidades" className="border-t border-line">
+        <div className="mx-auto max-w-6xl px-6 py-24 lg:py-36">
+          <SectionHeader
+            index="04"
+            label="Especialidades"
+            title="O que eu desenvolvo"
+            description="Do levantamento do problema à aplicação rodando em produção."
+          />
+          <div className="grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
+            {specialties.map((s, i) => (
+              <Reveal key={s.title} delay={i * 60}>
+                <div className="group h-full bg-background p-8 transition-colors duration-500 hover:bg-card">
+                  <span className="mono-label">{String(i + 1).padStart(2, "0")}</span>
+                  <h3 className="mt-6 text-lg font-medium">{s.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
+                  <span className="mt-6 block h-px w-8 bg-line-strong transition-all duration-500 group-hover:w-16" />
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="projetos" className="border-t border-line">
+        <div className="mx-auto max-w-6xl px-6 py-24 lg:py-36">
+          <SectionHeader
+            index="05"
+            label="Projetos profissionais"
+            title="Sistemas em produção"
+            description="Plataformas comerciais desenvolvidas para empresas e clientes reais."
+          />
+          {professionalProjects.map((p, i) => (
+            <ProjectBlock key={p.id} project={p} flip={i % 2 === 1} />
+          ))}
+        </div>
+      </section>
+
+      <section id="pessoais" className="border-t border-line">
+        <div className="mx-auto max-w-6xl px-6 py-24 lg:py-36">
+          <SectionHeader
+            index="06"
+            label="Projetos pessoais e acadêmicos"
+            title="Onde eu experimento"
+            description="Projetos próprios e acadêmicos com código e documentação disponíveis."
+          />
+          {personalProjects.map((p, i) => (
+            <ProjectBlock key={p.id} project={p} flip={i % 2 === 1} />
+          ))}
         </div>
       </section>
 

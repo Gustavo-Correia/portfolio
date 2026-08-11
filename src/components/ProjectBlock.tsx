@@ -55,9 +55,9 @@ export function ProjectBlock({ project, flip }: { project: Project; flip?: boole
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{project.role}</p>
             </div>
             {project.result ? (
-              <div>
+              <div className="border border-line bg-card p-5">
                 <span className="mono-label">Resultado</span>
-                <p className="mt-2 text-sm leading-relaxed text-foreground/85">{project.result}</p>
+                <p className="mt-2 text-base leading-relaxed text-foreground">{project.result}</p>
               </div>
             ) : null}
           </Reveal>
