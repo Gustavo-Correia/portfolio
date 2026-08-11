@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Github, Linkedin, Mail, MapPin, MessageCircle } from "lucide-react";
 
+import { AmbientLight } from "@/components/AmbientLight";
 import { BackgroundVideo } from "@/components/BackgroundVideo";
 import { Hero } from "@/components/Hero";
 import { Metrics } from "@/components/Metrics";
@@ -42,6 +43,7 @@ function Index() {
   return (
     <main className="relative">
       <ScrollProgress />
+      <AmbientLight />
       <BackgroundVideo />
       <Nav />
       <Hero />

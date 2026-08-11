@@ -7,7 +7,7 @@ export function Metrics({ items }: { items: Highlight[] }) {
       {items.map((h, i) => (
         <Reveal key={h.label} delay={i * 80}>
           <div className="flex h-full flex-col justify-between gap-10 bg-background p-6 sm:p-8">
-            <span className="text-5xl font-medium tracking-tight text-foreground sm:text-6xl">
+            <span className="text-5xl font-medium tracking-tight text-light sm:text-6xl">
               {h.value}
             </span>
             <p className="text-sm leading-relaxed text-muted-foreground">{h.label}</p>

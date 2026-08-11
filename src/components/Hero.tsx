@@ -36,7 +36,7 @@ export function Hero() {
         style={{ opacity: Math.max(fade, 0), transform: `translateY(${offset * 0.15}px)` }}
       >
         <div className="flex items-center gap-4">
-          <span className="size-1.5 rounded-full bg-foreground" />
+          <span className="size-1.5 rounded-full bg-light shadow-[0_0_12px_var(--light)]" />
           <span className="mono-label">Aracaju · Sergipe · Brasil</span>
         </div>
 

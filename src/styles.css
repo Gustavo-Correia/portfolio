@@ -30,6 +30,7 @@
   --color-ring: var(--ring);
   --color-line: var(--line);
   --color-line-strong: var(--line-strong);
+  --color-light: var(--light);
   --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
@@ -57,6 +58,7 @@
   --ring: oklch(1 0 0 / 40%);
   --line: oklch(1 0 0 / 14%);
   --line-strong: oklch(1 0 0 / 55%);
+  --light: oklch(0.85 0.15 80);
   --glow: 0 0 40px oklch(1 0 0 / 12%);
   --grid: linear-gradient(
       to right,
@@ -64,6 +66,16 @@
       transparent 1px
     ),
     linear-gradient(to bottom, oklch(1 0 0 / 4%) 1px, transparent 1px);
+}
+
+@keyframes light-breathe {
+  0%,
+  100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 .dark {
@@ -107,6 +119,22 @@
 
 @utility glow-line {
   box-shadow: var(--glow);
+}
+
+@utility ambient-light {
+  background-image: radial-gradient(
+    ellipse 90% 55% at 50% -18%,
+    oklch(0.85 0.15 80 / 26%),
+    transparent 68%
+  );
+}
+
+@utility ambient-core {
+  background-image: radial-gradient(
+    ellipse 45% 32% at 50% -12%,
+    oklch(1 1 0 / 10%),
+    transparent 65%
+  );
 }
 
 @utility reveal {

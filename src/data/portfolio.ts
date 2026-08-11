@@ -17,10 +17,6 @@ import sicadImg3 from "@/assets/sicad/6033b43b-8694-4560-b230-cba3b05aa4e3.png";
 
 import vemcaprofVideo from "@/assets/vemcaprof/marketing.mp4";
 
-import hospitalImg from "@/assets/hospital/image.png";
-
-import autouImg from "@/assets/AutoU/AutoU.png";
-
 export type Project = {
   id: string;
   index: string;
@@ -55,10 +51,10 @@ export const professionalProjects: Project[] = [
       "Integração com diferentes provedores de WhatsApp",
       "Gestão de conversas e contatos",
     ],
-    stack: ["API Oficial do WhatsApp", "Z-API", "Baileys", "API da OpenAI"],
+    stack: ["API Oficial do WhatsApp", "Baileys", "ChatBots", "Google Agendas", "apify", "OpenAI", "Node.js", "React", "Next.js", "MySQL", "Redis", "Docker", "CI/CD", "APIs REST", "MercadoPago", "React", "TypeScript", "OpenAI"],
     role: "Atuei no desenvolvimento e na manutenção de módulos da plataforma, nas integrações com provedores externos, na criação de automações e no processo de implantação em produção.",
     result:
-      "As funcionalidades de IA e tradução automática contribuíram para um aumento estimado de até 80% nas conversões de clientes internacionais.",
+      "As funcionalidades de IA e tradução automática contribuíram para um aumento estimado de até 40% nas conversões de clientes internacionais.",
     note: "Projeto proprietário desenvolvido no contexto da minha atuação profissional. As informações são limitadas à minha contribuição e ao que pode ser divulgado publicamente.",
     images: [{ src: crmImg, alt: "Plataforma de CRM e automação de WhatsApp" }],
   },
@@ -80,7 +76,7 @@ export const professionalProjects: Project[] = [
       "Relatórios financeiros",
       "Painel administrativo",
     ],
-    stack: ["PHP", "Laravel", "JavaScript", "Banco relacional", "APIs REST"],
+    stack: ["PHP", "Laravel", "JavaScript", "Banco relacional", "APIs REST", "Docker", "Docker Compose", "CI/CD", "Hospedagem em nuvem", "MercadoPago", "SqlServer"],
     role: "Fui responsável pelo desenvolvimento da solução desde a estrutura inicial, incluindo regras de negócio, backend, frontend, banco de dados e implantação.",
     note: "O código e as informações internas não são apresentados por se tratar de uma aplicação comercial.",
     images: [{ src: barbeariaImg, alt: "Plataforma SaaS de CRM para barbearias" }],
@@ -105,7 +101,7 @@ export const professionalProjects: Project[] = [
       "Fluxo pós-compra",
       "Painel administrativo",
     ],
-    stack: ["Node.js", "Mercado Pago", "WhatsApp", "APIs REST", "Banco relacional"],
+    stack: ["Node.js", "Mercado Pago", "WhatsApp", "APIs REST", "Banco relacional", "Docker", "Docker Compose", "CI/CD", "React", "Next.js", "TypeScript"],
     role: "Fui responsável pelo desenvolvimento da plataforma, incluindo módulos administrativos, regras de negócio, integração com o Mercado Pago, automação de mensagens, banco de dados e implantação.",
     result:
       "A solução centralizou a administração da loja e automatizou a comunicação pós-compra, reduzindo o acompanhamento manual dos pedidos.",
@@ -174,52 +170,6 @@ export const personalProjects: Project[] = [
       { label: "Ver demonstração", href: "https://github.com/Gustavo-Correia" },
     ],
   },
-  {
-    id: "hospitalsystem",
-    index: "06",
-    title: "HospitalSystem",
-    subtitle: "Sistema de gerenciamento hospitalar",
-    description:
-      "Aplicação desenvolvida em Java para organizar informações e operações relacionadas ao atendimento hospitalar. Aplicou conceitos de programação orientada a objetos, organização de dados, persistência e modelagem de entidades de um domínio complexo.",
-    features: [
-      "Cadastro de pacientes",
-      "Gerenciamento de informações hospitalares",
-      "Registro e consulta de dados",
-      "Persistência de informações",
-      "Organização de entidades e regras de negócio",
-    ],
-    stack: ["Java", "Maven", "POO", "Persistência de dados"],
-    role: "Projeto acadêmico desenvolvido em equipe na Universidade Federal de Sergipe.",
-    images: [{ src: hospitalImg, alt: "Interface do HospitalSystem" }],
-    links: [
-      { label: "Ver código no GitHub", href: "https://github.com/Gustavo-Correia" },
-      { label: "Ver documentação", href: "https://github.com/Gustavo-Correia" },
-    ],
-  },
-  {
-    id: "autou",
-    index: "07",
-    title: "AutoU",
-    subtitle: "Classificação automática de e-mails com inteligência artificial",
-    description:
-      "Aplicação web que utiliza processamento de linguagem natural para classificar e-mails e sugerir respostas automáticas. O usuário pode inserir o conteúdo diretamente ou enviar arquivos TXT e PDF; o sistema analisa o texto, classifica a mensagem e gera uma sugestão de resposta.",
-    features: [
-      "Entrada direta de texto",
-      "Upload de arquivos TXT e PDF",
-      "Extração e processamento de conteúdo",
-      "Classificação automática de e-mails",
-      "Geração de respostas",
-      "Interface web responsiva",
-      "Integração com serviço externo de IA",
-    ],
-    stack: ["Python", "Flask", "HTML", "CSS", "JavaScript", "Hugging Face", "NLTK"],
-    role: "Desenvolvimento completo da aplicação, do processamento de texto à interface web.",
-    images: [{ src: autouImg, alt: "Interface do AutoU com classificação de e-mails" }],
-    links: [
-      { label: "Ver código no GitHub", href: "https://github.com/Gustavo-Correia" },
-      { label: "Acessar demonstração", href: "https://github.com/Gustavo-Correia" },
-    ],
-  },
 ];
 
 export const experiences = [
@@ -243,7 +193,7 @@ export const experiences = [
       "Participação no processo de integração e entrega contínua",
     ],
     footer:
-      "A tradução automática e o atendimento com IA contribuíram para um aumento estimado de até 80% nas conversões do público internacional em produção. Por se tratar de solução comercial proprietária, o código-fonte e os detalhes internos não são públicos.",
+      "A tradução automática e o atendimento com IA contribuíram para um aumento estimado de até 40% nas conversões do público internacional em produção. Por se tratar de solução comercial proprietária, o código-fonte e os detalhes internos não são públicos.",
   },
   {
     company: "Desenvolvedor Full Stack Freelancer",

@@ -26,7 +26,7 @@ export function Nav() {
       }`}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#inicio" className="font-mono text-xs tracking-[0.3em] uppercase">
+        <a href="#inicio" className="font-mono text-xs tracking-[0.3em] uppercase transition-colors hover:text-light">
           LGAC
         </a>
         <ul className="hidden items-center gap-7 md:flex">
