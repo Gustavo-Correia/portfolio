@@ -49,15 +49,19 @@ export function ProjectBlock({ project, flip }: { project: Project; flip?: boole
             </div>
           </Reveal>
 
-          <Reveal delay={220} className="mt-8 space-y-4 border-l border-line pl-5">
+          <Reveal delay={220} className="mt-8 space-y-4 border-l border-light/25 pl-5">
             <div>
-              <span className="mono-label">Minha participação</span>
+              <span className="font-mono text-[0.6875rem] tracking-[0.22em] text-light uppercase">
+                Minha participação
+              </span>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{project.role}</p>
             </div>
             {project.result ? (
-              <div className="border border-line bg-card p-5">
-                <span className="mono-label">Resultado</span>
-                <p className="mt-2 text-base leading-relaxed text-foreground">{project.result}</p>
+              <div className="border border-light/35 bg-card p-5">
+                <span className="font-mono text-[0.6875rem] tracking-[0.22em] text-light uppercase">
+                  Resultado
+                </span>
+                <p className="mt-2 text-base leading-relaxed text-light">{project.result}</p>
               </div>
             ) : null}
           </Reveal>

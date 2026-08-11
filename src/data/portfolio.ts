@@ -54,13 +54,49 @@ export const professionalProjects: Project[] = [
     stack: ["API Oficial do WhatsApp", "Baileys", "ChatBots", "Google Agendas", "apify", "OpenAI", "Node.js", "React", "Next.js", "MySQL", "Redis", "Docker", "CI/CD", "APIs REST", "MercadoPago", "React", "TypeScript", "OpenAI"],
     role: "Atuei no desenvolvimento e na manutenção de módulos da plataforma, nas integrações com provedores externos, na criação de automações e no processo de implantação em produção.",
     result:
-      "As funcionalidades de IA e tradução automática contribuíram para um aumento estimado de até 40% nas conversões de clientes internacionais.",
+      "A combinação de tradução automática e atendimento por IA elevou a conversão de clientes internacionais em até 40%.",
     note: "Projeto proprietário desenvolvido no contexto da minha atuação profissional. As informações são limitadas à minha contribuição e ao que pode ser divulgado publicamente.",
     images: [{ src: crmImg, alt: "Plataforma de CRM e automação de WhatsApp" }],
   },
   {
-    id: "saas-barbearias",
+    id: "vendas-whatsapp",
     index: "02",
+    title: "Plataforma de vendas com automação via WhatsApp",
+    subtitle: "Loja virtual, pagamentos e acompanhamento automatizado",
+    description:
+      "Projeto freelancer para automatizar o processo comercial de uma loja. A plataforma gerencia produtos, categorias, catálogo e pedidos. Após a compra, o sistema inicia automaticamente um fluxo de mensagens pelo WhatsApp para acompanhar o cliente até a finalização. O pagamento foi integrado ao Mercado Pago, permitindo criar transações, acompanhar status e confirmar pagamentos.",
+    features: [
+      "Gerenciamento da loja",
+      "Cadastro e edição de produtos",
+      "Organização por categorias",
+      "Gerenciamento de catálogo",
+      "Criação e acompanhamento de pedidos",
+      "Integração com o Mercado Pago",
+      "Confirmação de pagamentos",
+      "Atualização do status dos pedidos",
+      "Automação de mensagens pelo WhatsApp",
+      "Fluxo pós-compra",
+      "Painel administrativo",
+    ],
+    stack: ["Node.js", "Mercado Pago", "WhatsApp", "APIs REST", "Banco relacional"],
+    role: "Fui responsável pelo desenvolvimento da plataforma, incluindo módulos administrativos, regras de negócio, integração com o Mercado Pago, automação de mensagens, banco de dados e implantação.",
+    result:
+      "A loja virtual com o fluxo de mensagens automatizado converteu cerca de 70% dos leads, sem que um atendente precisasse iniciar a conversa.",
+    note: "Projeto comercial desenvolvido para um cliente. Por propriedade intelectual e confidencialidade, código-fonte, dados e detalhes internos não estão disponíveis publicamente.",
+    images: [
+      { src: freelaStore, alt: "Loja virtual publicada" },
+      { src: freelaCriacaoLoja, alt: "Criação da loja virtual" },
+      { src: freelaCatalogo, alt: "Catálogo de produtos da loja" },
+      { src: freelaCategorias, alt: "Produtos organizados por categorias" },
+      { src: freelaCriacaoLojaPagamento, alt: "Configuração de pagamento no Mercado Pago" },
+      { src: freelaNovoPedido, alt: "Tela de criação de novo pedido" },
+      { src: freelaPedidos, alt: "Listagem e status dos pedidos" },
+      { src: freelaChat, alt: "Fluxo de conversa automatizada via WhatsApp" },
+    ],
+  },
+  {
+    id: "saas-barbearias",
+    index: "03",
     title: "SaaS de CRM para barbearias",
     subtitle: "Gestão de clientes, agendamentos e controle financeiro",
     description:
@@ -81,43 +117,7 @@ export const professionalProjects: Project[] = [
     note: "O código e as informações internas não são apresentados por se tratar de uma aplicação comercial.",
     images: [{ src: barbeariaImg, alt: "Plataforma SaaS de CRM para barbearias" }],
   },
-  {
-    id: "vendas-whatsapp",
-    index: "03",
-    title: "Plataforma de vendas com automação via WhatsApp",
-    subtitle: "Loja virtual, pagamentos e acompanhamento automatizado",
-    description:
-      "Projeto freelancer para automatizar o processo comercial de uma loja. A plataforma gerencia produtos, categorias, catálogo e pedidos. Após a compra, o sistema inicia automaticamente um fluxo de mensagens pelo WhatsApp para acompanhar o cliente até a finalização. O pagamento foi integrado ao Mercado Pago, permitindo criar transações, acompanhar status e confirmar pagamentos.",
-    features: [
-      "Gerenciamento da loja",
-      "Cadastro e edição de produtos",
-      "Organização por categorias",
-      "Gerenciamento de catálogo",
-      "Criação e acompanhamento de pedidos",
-      "Integração com o Mercado Pago",
-      "Confirmação de pagamentos",
-      "Atualização do status dos pedidos",
-      "Automação de mensagens pelo WhatsApp",
-      "Fluxo pós-compra",
-      "Painel administrativo",
-    ],
-    stack: ["Node.js", "Mercado Pago", "WhatsApp", "APIs REST", "Banco relacional", "Docker", "Docker Compose", "CI/CD", "React", "Next.js", "TypeScript"],
-    role: "Fui responsável pelo desenvolvimento da plataforma, incluindo módulos administrativos, regras de negócio, integração com o Mercado Pago, automação de mensagens, banco de dados e implantação.",
-    result:
-      "A solução centralizou a administração da loja e automatizou a comunicação pós-compra, reduzindo o acompanhamento manual dos pedidos.",
-    note: "Projeto comercial desenvolvido para um cliente. Por propriedade intelectual e confidencialidade, código-fonte, dados e detalhes internos não estão disponíveis publicamente.",
-    images: [
-      { src: freelaStore, alt: "Loja virtual publicada" },
-      { src: freelaCriacaoLoja, alt: "Criação da loja virtual" },
-      { src: freelaCatalogo, alt: "Catálogo de produtos da loja" },
-      { src: freelaCategorias, alt: "Produtos organizados por categorias" },
-      { src: freelaCriacaoLojaPagamento, alt: "Configuração de pagamento no Mercado Pago" },
-      { src: freelaNovoPedido, alt: "Tela de criação de novo pedido" },
-      { src: freelaPedidos, alt: "Listagem e status dos pedidos" },
-      { src: freelaChat, alt: "Fluxo de conversa automatizada via WhatsApp" },
-    ],
-  },
-];
+  ];
 
 export const personalProjects: Project[] = [
   {
