@@ -131,37 +131,46 @@ function Index() {
       </section>
 
       <section id="experiencia" className="border-t border-line">
-        <div className="mx-auto max-w-6xl px-6 py-24 lg:py-36">
+        <div className="relative mx-auto max-w-6xl px-6 py-24 lg:py-36">
+          <div className="ambient-gold pointer-events-none absolute inset-x-0 top-0 h-64" />
           <SectionHeader
+            gold
             index="02"
             label="Trajetória"
             title="Experiência profissional"
             description="3+ anos de experiência em sistemas comerciais, CRM, automação e integrações."
           />
-          <div className="space-y-px">
+          <div className="relative space-y-6">
             {experiences.map((e, i) => (
               <Reveal key={e.company} delay={i * 80}>
-                <div className="grid gap-8 border-t border-line py-12 lg:grid-cols-[1fr_1.6fr]">
-                  <div>
-                    <h3 className="text-xl font-medium">{e.company}</h3>
-                    <p className="mt-2 text-sm text-muted-foreground">{e.role}</p>
-                    <p className="mono-label mt-4">{e.period}</p>
-                  </div>
-                  <div>
-                    <p className="text-sm leading-relaxed text-muted-foreground">{e.summary}</p>
-                    <ul className="mt-6 grid gap-x-8 gap-y-2 sm:grid-cols-2">
-                      {e.bullets.map((b) => (
-                        <li key={b} className="flex gap-3 text-sm text-foreground/85">
-                          <span className="mt-2.5 h-px w-3 shrink-0 bg-line-strong" />
-                          {b}
-                        </li>
-                      ))}
-                    </ul>
-                    {e.footer ? (
-                      <p className="mt-6 font-mono text-[11px] leading-relaxed text-muted-foreground/70">
-                        {e.footer}
+                <div className="group relative border border-gold/25 bg-card/50 p-8 transition-colors duration-500 hover:border-gold/50 hover:bg-card lg:p-10">
+                  <span className="absolute inset-y-0 left-0 w-px bg-gradient-to-b from-transparent via-gold to-transparent" />
+                  <div className="grid gap-8 lg:grid-cols-[1fr_1.6fr]">
+                    <div>
+                      <h3 className="text-2xl font-medium tracking-tight text-gold">
+                        {e.company}
+                      </h3>
+                      <p className="mt-2 text-sm text-light/90">{e.role}</p>
+                      <p className="mt-4 font-mono text-[0.6875rem] tracking-[0.22em] text-gold/80 uppercase">
+                        {e.period}
                       </p>
-                    ) : null}
+                    </div>
+                    <div>
+                      <p className="text-sm leading-relaxed text-muted-foreground">{e.summary}</p>
+                      <ul className="mt-6 grid gap-x-8 gap-y-2 sm:grid-cols-2">
+                        {e.bullets.map((b) => (
+                          <li key={b} className="flex gap-3 text-sm text-foreground/90">
+                            <span className="mt-2.5 h-px w-3 shrink-0 bg-gold" />
+                            {b}
+                          </li>
+                        ))}
+                      </ul>
+                      {e.footer ? (
+                        <p className="mt-6 font-mono text-[11px] leading-relaxed text-gold/70">
+                          {e.footer}
+                        </p>
+                      ) : null}
+                    </div>
                   </div>
                 </div>
               </Reveal>

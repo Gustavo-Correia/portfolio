@@ -5,20 +5,32 @@ export function SectionHeader({
   label,
   title,
   description,
+  gold,
 }: {
   index: string;
   label: string;
   title: string;
   description?: string;
+  gold?: boolean;
 }) {
   return (
     <Reveal className="mb-14">
       <div className="flex items-center gap-4">
-        <span className="mono-label">{index}</span>
-        <span className="h-px flex-1 bg-line" />
-        <span className="mono-label">{label}</span>
+        <span className={gold ? "font-mono text-[0.6875rem] tracking-[0.22em] text-gold uppercase" : "mono-label"}>
+          {index}
+        </span>
+        <span className={gold ? "h-px flex-1 bg-gold/40" : "h-px flex-1 bg-line"} />
+        <span className={gold ? "font-mono text-[0.6875rem] tracking-[0.22em] text-gold uppercase" : "mono-label"}>
+          {label}
+        </span>
       </div>
-      <h2 className="mt-8 max-w-3xl text-3xl font-medium tracking-tight text-foreground sm:text-5xl">
+      <h2
+        className={
+          gold
+            ? "mt-8 max-w-3xl bg-gradient-to-r from-gold via-light to-gold bg-clip-text text-3xl font-medium tracking-tight text-transparent sm:text-5xl"
+            : "mt-8 max-w-3xl text-3xl font-medium tracking-tight text-foreground sm:text-5xl"
+        }
+      >
         {title}
       </h2>
       {description ? (

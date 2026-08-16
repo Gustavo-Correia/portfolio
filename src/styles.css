@@ -31,6 +31,8 @@
   --color-line: var(--line);
   --color-line-strong: var(--line-strong);
   --color-light: var(--light);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
   --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
@@ -59,6 +61,8 @@
   --line: oklch(1 0 0 / 14%);
   --line-strong: oklch(1 0 0 / 55%);
   --light: oklch(0.85 0.15 80);
+  --gold: oklch(0.79 0.15 85);
+  --gold-soft: oklch(0.79 0.15 85 / 12%);
   --glow: 0 0 40px oklch(1 0 0 / 12%);
   --grid: linear-gradient(
       to right,
@@ -134,6 +138,14 @@
     ellipse 45% 32% at 50% -12%,
     oklch(1 1 0 / 10%),
     transparent 65%
+  );
+}
+
+@utility ambient-gold {
+  background-image: radial-gradient(
+    ellipse 70% 90% at 50% 0%,
+    oklch(0.79 0.15 85 / 11%),
+    transparent 70%
   );
 }
 
