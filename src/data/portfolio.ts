@@ -214,7 +214,7 @@ export const experiences = [
   {
     company: "Desenvolvedor Full Stack Freelancer",
     role: "CRM, comércio eletrônico e automação",
-    period: "2023 – Atual",
+    period: "2023 – 2024",
     summary:
       "Sistemas personalizados para pequenas e médias empresas, da análise do problema à implantação da solução: plataformas CRM, automação de atendimento, sistemas comerciais e integrações com WhatsApp, pagamentos e IA.",
     bullets: [
